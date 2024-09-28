@@ -1,7 +1,7 @@
-import './App.css'
 import { AppShell, useMantineColorScheme } from '@mantine/core'
 import { Header } from './components/Header';
 import { Outlet } from 'react-router-dom';
+import "@mantine/core/styles.css"; // Ref: https://mantine.dev/changelog/7-0-0/#global-styles
 
 export function App() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();

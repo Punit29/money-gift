@@ -24,6 +24,8 @@ const NavLinks = [
 
 export function Header({ colorScheme, onToggleColorScheme }) {
   const location = useLocation();
+  console.log("clolr", colorScheme);
+  
 
   return (
     <AppShell.Header p="xs">
