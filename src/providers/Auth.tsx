@@ -12,7 +12,7 @@ interface AuthContextType {
   setUser: React.Dispatch<React.SetStateAction<FormValues | undefined>>;
 }
 
-const AuthContext = createContext<AuthContextType | null>(null);
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function useAuthContext() {
   const context = useContext(AuthContext);
@@ -27,18 +27,18 @@ export function AuthProvider({ children }:any) {
   const loggedInUser = readLocalStorageValue<FormValues>({
     key: "loggedUser"
   });
-  
-console.log("logged", loggedInUser);
 
   const [user, setUser] = useState<FormValues>();
 
+  console.log("loggedInUser", loggedInUser);
+  
   useEffect(() => {
-    console.log("1111111111111");
     setUser(loggedInUser);
-  }, [])
+  }, []);
+
+  console.log("user", user);
   
   const handleLogout = useCallback(() => {
-    console.log("adasdasdasdas");
     navigate("/auth");
   }, [navigate]);
 
@@ -50,8 +50,10 @@ console.log("logged", loggedInUser);
     };
   }, [handleLogout, user, setUser]);
 
+  console.log("value", value);
+  
+
   useEffect(() => {
-    console.log("adasdasdasdas");
     const getUserDetails = async () => {
       if (loggedInUser?.loggedUser) {
         navigate("/");

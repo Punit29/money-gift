@@ -1,5 +1,5 @@
-import { AppShell, useMantineColorScheme } from '@mantine/core'
-import { Header } from './components/Header';
+import { AppShell, Button, useMantineColorScheme } from '@mantine/core'
+import { Header } from "./components/Header";
 import { Outlet } from 'react-router-dom';
 import "@mantine/core/styles.css";
 import { AuthProvider } from './providers/Auth';
@@ -13,6 +13,11 @@ export function App() {
         header={{ height: 60 }}
       >
         <Header colorScheme={colorScheme} onToggleColorScheme={toggleColorScheme} />
+        <Button
+          variant='filled'
+        >
+          Create Event
+        </Button>
         <AppShell.Main>
           <Outlet /> 
         </AppShell.Main>
