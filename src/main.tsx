@@ -14,7 +14,7 @@ export const MantineTheme = createTheme({
   fontFamily: "Ruda, san-serif",
 });
 
-createRoot(document.getElementById('root')).render(
+createRoot((document.getElementById('root')!)).render(
   <StrictMode>
     <MantineProvider theme={MantineTheme}>
       <RouterProvider router={Routers} />

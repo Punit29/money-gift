@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { ErrorPage } from "./pages/ErrorPage";
-import { PageA } from "./pages/Page-A";
-import { PageB } from "./pages/Page-B";
+import { ErrorPage } from "./Pages/ErrorPage";
+import { PageA } from "./Pages/Page-A";
+import { PageB } from "./Pages/Page-B";
+import { AuthenticationForm } from "./Pages/AuthForm";
 
 export const Routers = createBrowserRouter([
   {
@@ -19,5 +20,9 @@ export const Routers = createBrowserRouter([
         element: <PageB />,
       },
     ],
+  },
+  {
+    path: "/auth",
+    element: <AuthenticationForm />
   },
 ]);
