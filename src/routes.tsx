@@ -3,7 +3,7 @@ import { App } from "./App";
 import { ErrorPage } from "./Pages/ErrorPage";
 import { Home } from "./Pages/Home";
 import { PageA } from "./Pages/Page-A";
-import { PageB } from "./Pages/Page-B";
+import { CreateEvents } from "./Pages/CreateEvents";
 import { AuthenticationForm } from "./Pages/AuthForm";
 
 export const Routers = createBrowserRouter([
@@ -17,12 +17,12 @@ export const Routers = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "page-a",
+        path: "events",
         element: <PageA />,
       },
       {
-        path: "page-b",
-        element: <PageB />,
+        path: "events/create",
+        element: <CreateEvents />,
       },
     ],
   },

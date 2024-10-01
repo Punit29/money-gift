@@ -13,13 +13,9 @@ import {
   Stack,
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
+import { ComponentProps } from 'react';
 
-import { ComponentProps } from 'react';  // Import ComponentProps
-// interface AuthenticationFormProps extends PaperProps{};
-
-// Extract props for the Paper component using ComponentProps
 type PaperProps = ComponentProps<typeof Paper>;
-
 
 
 export interface FormValues {
@@ -29,6 +25,7 @@ export interface FormValues {
   terms: boolean;
   loggedUser?: boolean;
 }
+
 export function AuthenticationForm(props: PaperProps) {
   const [type, toggle] = useToggle(['login', 'register']);
   const navigate = useNavigate();

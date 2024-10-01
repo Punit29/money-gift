@@ -1,7 +1,13 @@
-import { AppShell, ActionIcon, Group, NavLink as MantineNavLink, Title } from "@mantine/core";
+import { AppShell, ActionIcon, Group, NavLink as MantineNavLink, Title, MantineColorScheme } from "@mantine/core";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { NavLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
+
+
+export interface HeaderProps {
+  colorScheme: MantineColorScheme;
+  onToggleColorScheme: () => void;
+}
 
 const NavLinks = [
   {
@@ -9,20 +15,12 @@ const NavLinks = [
     label: "Home",
   },
   {
-    path: "/page-a",
-    label: "PageA",
-  },
-  {
-    path: "/page-b",
-    label: "PageB",
-  },
-  {
-    path: "/broken",
-    label: "Broken",
+    path: "/events",
+    label: "Events",
   },
 ];
 
-export function Header({ colorScheme, onToggleColorScheme }) {
+export function Header({ colorScheme, onToggleColorScheme }: HeaderProps) {
   const location = useLocation();
 
   return (

@@ -13,11 +13,6 @@ export function App() {
         header={{ height: 60 }}
       >
         <Header colorScheme={colorScheme} onToggleColorScheme={toggleColorScheme} />
-        <Button
-          variant='filled'
-        >
-          Create Event
-        </Button>
         <AppShell.Main>
           <Outlet /> 
         </AppShell.Main>
