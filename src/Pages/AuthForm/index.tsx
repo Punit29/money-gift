@@ -11,6 +11,7 @@ import {
   Checkbox,
   Anchor,
   Stack,
+  Center,
 } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import { ComponentProps } from 'react';
@@ -76,6 +77,7 @@ export function AuthenticationForm(props: PaperProps) {
   }
 
   return (
+    <Center h="100vh">
     <Paper radius="md" p="xl" withBorder {...props}>
       <Text size="lg" fw={500}>
         {type}
@@ -136,5 +138,6 @@ export function AuthenticationForm(props: PaperProps) {
         </Group>
       </form>
     </Paper>
+    </Center>
   );
 }

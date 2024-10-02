@@ -26,7 +26,7 @@ export function Header({ colorScheme, onToggleColorScheme }: HeaderProps) {
   return (
     <AppShell.Header p="xs">
       <Group justify="space-between" align="center">
-        <Title order={5}>Header</Title>
+        <Title order={5}>Gifting!!</Title>
         <Group wrap="nowrap">
           {NavLinks.map(({ path, label }) => {
             return (
