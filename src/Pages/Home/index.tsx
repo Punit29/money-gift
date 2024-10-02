@@ -1,5 +1,6 @@
-import { Center, Stack, Title } from "@mantine/core";
+import { Button, Center, Stack, Title } from "@mantine/core";
 import { useAuthContext } from "../../providers/Auth";
+import { Link } from "react-router-dom";
 
 export function Home(): JSX.Element {
 
@@ -16,6 +17,7 @@ export function Home(): JSX.Element {
               TING!!!!
             </Title>
           </Title>
+          <Button component={Link} to="/events/create">Create New Event</Button>
         </Stack>
       </Center>
     </>
