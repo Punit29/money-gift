@@ -17,6 +17,7 @@ export function Home(): JSX.Element {
           </Title>
         </Title>
         <Button component={Link} to="/events/create">Create New Event</Button>
+        <Button component={Link} to="/invite/create">Create Invite</Button>
       </Stack>
     </Center>
   );

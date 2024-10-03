@@ -18,6 +18,10 @@ const NavLinks = [
     path: "/events",
     label: "Events",
   },
+  {
+    path: "/invite/create",
+    label: "Invite",
+  },
 ];
 
 export function Header({ colorScheme, onToggleColorScheme }: HeaderProps) {

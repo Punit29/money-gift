@@ -5,6 +5,7 @@ import { Home } from "./Pages/Home";
 import { PageA } from "./Pages/Page-A";
 import { CreateEvents } from "./Pages/CreateEvents";
 import { AuthenticationForm } from "./Pages/AuthForm";
+import { CreateInvite } from "./Pages/CreateInvite";
 
 export const Routers = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const Routers = createBrowserRouter([
       {
         path: "events/create",
         element: <CreateEvents />,
+      },
+      {
+        path: "invite/create",
+        element: <CreateInvite />,
       },
     ],
   },
